@@ -46,9 +46,50 @@ We need to add the `SoundVolumeView.exe` to PATH to enable use to execute a scri
 - Install auto-py-to-exe `pip install auto-py-to-exe`
 - This will allow us to convert the `.py` file to a `.exe` file
 
-
+Commands
 ```powershell
 SoundVolumeView.exe /SetSpatial "CORSAIR HS65 SURROUND USB Adapter" "Windows Sonic For Headphones"
 SoundVolumeView.exe /SetSpatial "CORSAIR HS65 SURROUND USB Adapter" "Dolby Atmos For Headphones"
 SoundVolumeView.exe /SetSpatial "CORSAIR HS65 SURROUND USB Adapter" "Off"
+```
+
+### Python Scripts
+#### Create python file such as: `SetSpatialSound_Off.py`
+#### Paste Script Below But Change Device Name  `"CORSAIR HS65 SURROUND USB Adapter"` to your own Device Name Retrieved from SoundVolumeView Program
+```python
+import subprocess
+
+command = [
+    "powershell.exe",
+    'SoundVolumeView.exe /SetSpatial "CORSAIR HS65 SURROUND USB Adapter" ""'
+]
+
+subprocess.run(command, shell=False, text=True, capture_output=True)
+
+```
+#### Create python file such as: `SetSpatialSound_Dolby_Atmos.py`
+#### Paste Script Below But Change Device Name  `"CORSAIR HS65 SURROUND USB Adapter"` to your own Device Name Retrieved from SoundVolumeView Program
+```python
+import subprocess
+
+command = [
+    "powershell.exe",
+    'SoundVolumeView.exe /SetSpatial "CORSAIR HS65 SURROUND USB Adapter" ""'
+]
+
+subprocess.run(command, shell=False, text=True, capture_output=True)
+
+```
+#### Create python file such as: `SetSpatialSound_Windows_Sonic.py`
+#### Paste Script Below But Change Device Name  `"CORSAIR HS65 SURROUND USB Adapter"` to your own Device Name Retrieved from SoundVolumeView Program
+```python
+import subprocess
+
+command = [
+    "powershell.exe",
+    'SoundVolumeView.exe /SetSpatial "CORSAIR HS65 SURROUND USB Adapter" ""'
+]
+
+subprocess.run(command, shell=False, text=True, capture_output=True)
+
 ```
