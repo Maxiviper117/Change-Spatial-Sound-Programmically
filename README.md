@@ -15,27 +15,24 @@ Adjusting spatial sound settings such as Windows Sonic or Dobly Atmos in Windows
 ## Add this folder Path to Environment Variables
 We need to add the `SoundVolumeView.exe` to PATH to enable use to execute a script from anywhere, shown later in the steps.
 
-1. Press `Win + X`
-2. Click on **System**
-3. Click on **Advanced system settings**
-	- Or search in start menu: 
-	- ![image](https://user-images.githubusercontent.com/11472492/228288232-22fa5257-2cdb-4c54-89f4-e017a13f4b98.png)
-4. Go to the **Advanced** tab
-5. Click on the **Environment Variables** button
-6. Locate **Path** under **System variables**
-   - If **Path** exists, select and click on **Edit**
-   - If **Path** doesn't exist, click on **New**
-7. If you clicked **Edit** in step 6:
-   - Click on the **New** button
-   - Enter `C:\SoundVolumeView`
-   c. Click on **OK**
-8. If you clicked **New** in step 6:
-   - Enter **Path** as the variable name
-   - Enter `C:\SoundVolumeView` as the variable value
-   - Click on **OK**
-9. Click on **OK** to close Environment Variables window
-10. Click on **OK** to close System Properties window
-11. Restart any open command prompt or PowerShell windows
+### Add C:\SoundVolumeView to Path using PowerShell
+
+1. Open a PowerShell instance with administrative privileges:
+   - Right-click on the Start button.
+   - Select "Windows PowerShell (Admin)" from the context menu.
+   - Click "Yes" when prompted by User Account Control (UAC).
+
+2. Copy and paste the following command into the PowerShell window: but replace `C:\SoundVolumeView` with the parent folder path where you placed the `SoundVolumeView.exe` in.
+
+   ```powershell
+   [Environment]::SetEnvironmentVariable("Path", "$env:Path;C:\SoundVolumeView", "User")
+   ```
+3. Press Enter to execute the command.
+4. Close the PowerShell window.
+5. Restart any open command prompt or PowerShell windows for the changes to take effect.
+
+change that sets to rather use this powershell command to add `C:\SoundVolumeView` to path. using this command [Environment]::SetEnvironmentVariable("Path", "$env:Path;C:\SoundVolumeView", "User")
+
 
 ## Get Device Name of Headphones
 - Open `SoundVolumeView` directly
