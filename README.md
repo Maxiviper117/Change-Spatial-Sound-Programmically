@@ -31,15 +31,11 @@ We need to add the `SoundVolumeView.exe` to PATH to enable use to execute a scri
 4. Close the PowerShell window.
 5. Restart any open command prompt or PowerShell windows for the changes to take effect.
 
-change that sets to rather use this powershell command to add `C:\SoundVolumeView` to path. using this command [Environment]::SetEnvironmentVariable("Path", "$env:Path;C:\SoundVolumeView", "User")
-
-
 ## Get Device Name of Headphones
 - Open `SoundVolumeView` directly
 - Take note of Device Name
 	- Example from my system: `CORSAIR HS65 SURROUND USB Adapter`
 	- ![image](https://user-images.githubusercontent.com/11472492/228289670-06558592-122e-4a2d-a58d-ceb73f0bef50.png)
-
 
 ## Python
 - Install auto-py-to-exe `pip install auto-py-to-exe`
