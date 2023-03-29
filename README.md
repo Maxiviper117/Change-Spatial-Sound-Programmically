@@ -2,6 +2,8 @@
 
 # Change-Spatial-Sound-Programmically
 
+Adjusting spatial sound settings such as Windows Sonic or Dobly Atmos in Windows 11 can be a time-consuming and cumbersome task. Users are required to navigate through multiple menus to toggle settings to a different option or turn them off completely. As a user of Corsair HS65 headphones with Dolby Atmos support, I often find myself needing to toggle spatial sound off depending on the game or video I'm watching. However, there are no readily available shortcut keys to simplify the process, making it unnecessarily complicated.
+
 # Windows
 
 ## Download `SoundVolumeView` 
